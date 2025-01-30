@@ -3,10 +3,10 @@ const video = document.getElementById('video')
 var eyeClosedThreshold = 10
 const blinkCount = 0
 Promise.all([
-  faceapi.nets.tinyFaceDetector.loadFromUri('./tensorflow/models'),
-  faceapi.nets.faceLandmark68Net.loadFromUri('./tensorflow/models'),
-  faceapi.nets.faceRecognitionNet.loadFromUri('./tensorflow/models'),
-  faceapi.nets.faceExpressionNet.loadFromUri('./tensorflow/models')
+  faceapi.nets.tinyFaceDetector.loadFromUri('./models'),
+  faceapi.nets.faceLandmark68Net.loadFromUri('./models'),
+  faceapi.nets.faceRecognitionNet.loadFromUri('./models'),
+  faceapi.nets.faceExpressionNet.loadFromUri('./models')
 ]).then(startVideo)
 
 function startVideo() {
